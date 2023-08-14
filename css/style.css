@@ -151,7 +151,6 @@ body {
 
 .main__image {
   flex: 0 0 65%;
-  height: 100vh;
   width: 100%;
   position: relative;
 }
