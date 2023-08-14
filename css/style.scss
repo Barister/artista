@@ -1,0 +1,168 @@
+// Font use
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:regular,500,600,700);
+
+@import url(https://fonts.googleapis.com/css?family=Nobile:regular,500,700);
+
+// Resetting style
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   &, &::before, &::after {
+      box-sizing: border-box;
+   }
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+// Main styles
+
+html, body {
+   height: 100%;
+   min-width: 320px;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem;
+   font-family: 'Exo 2', sans-serif;
+}
+
+.wrapper {
+   height: 100%;
+   width: 100%;
+   background-color: #424651;
+   color: #F5F3F5;
+   overflow: clip;
+}
+
+.main {
+   display: flex;
+}
+
+.main__content {
+   flex: 0 0 35%;
+   padding: 4rem 0px 0px 4rem;
+}
+.main__logo {
+   margin: 0px 0px 7.0rem 0px;
+}
+.main__title {
+   font-size: 4.5rem;
+   font-weight: 700;
+   line-height: 112.5%; /* 50.625px */
+   letter-spacing: 4.95px;
+   margin: 0px 0px 7.0rem 0px;
+}
+
+.title {
+}
+
+.title--green {
+   color: #21FA90;
+}
+.main__subtitle {
+   font-size: 2.4rem;
+   margin: 0px 0px 7.0rem 0px;
+   font-weight: 600;
+   line-height: 105%; /* 25.2px */
+   letter-spacing: 3px;
+}
+
+.main__text {
+   max-width: 40rem;
+   font-weight: 500;
+   line-height: 126.5%; /* 20.24px */
+   letter-spacing: 2.16px;
+   margin: 0px 0px 7.0rem 0px;
+   & p:not(:last-child) {
+      margin: 0px 0px 2.0rem 0px;
+   }
+   & span {
+      color: #21FA90;
+   }
+}
+
+.main__button {
+   border-radius: 30px;
+   padding: 1.5rem 6.7rem;
+   font-family: Nobile, sans-serif;
+   font-size: 1.6rem;
+   font-weight: 500;
+   //line-height: 126.5%; /* 20.24px */
+   letter-spacing: 2.16px;
+}
+
+.main__image {
+   flex: 0 0 65%;
+   height: 100vh;
+   width: 100%;
+   position: relative;
+}
+
+.image__base {
+   position: absolute;
+   width: 130vw;
+   height: 130vw;
+   box-shadow: 20px 20px 38px 0px rgba(0, 0, 0, 0.26) inset;
+   //aspect-ratio: 1/1;
+   bottom: 0;
+   right: 0;
+   border-radius: 50%;
+   z-index: 1;
+   background-color: #F5F3F5;
+   transform: translate(50%, 50%);
+   & img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 7.0rem;
+      //aspect-ratio: 1/1;
+      // bottom: 0;
+      // right: 0;
+      //border-radius: 50%;
+      //background-color: #F5F3F5;
+      //transform: translate(50%, 50%);
+      animation: rotate 120s linear infinite; /* Название анимации, продолжительность, тип анимации и бесконечный цикл */
+      transform-origin: center; /* Центр вращения */
+      @media (max-width: 767.98px) {
+         padding: 5.0rem;
+      } 
+      @media (max-width: 600px) {
+         padding: 3.0rem;
+         // width: 80%;
+         // aspect-ratio: 1/1;
+      } 
+   }
+}
+
+@keyframes rotate {
+   from {
+     transform: rotate(0deg);
+   }
+   to {
+     transform: rotate(360deg);
+   }
+ }
